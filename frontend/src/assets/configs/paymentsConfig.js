@@ -118,4 +118,3 @@ export const getPaymentsConfig = (user) => ({
   },
 });
 
-export default getPaymentsConfig;

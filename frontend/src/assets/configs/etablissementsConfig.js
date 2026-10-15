@@ -303,4 +303,3 @@ export const getEtablissementsConfig = (user) => ({
   },
 });
 
-export default getEtablissementsConfig;
