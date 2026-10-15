@@ -5,7 +5,6 @@ const documentTypesService = {
     async getAll(id, params = {}) {
         try {
             const response = await axiosClient.get("/document-types", { params });
-            console.log("response document" + JSON.stringify(response))
             return response?.data?.data;
         } catch (error) {
             ErrorHandling(error);

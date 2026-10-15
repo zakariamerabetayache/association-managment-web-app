@@ -1,5 +1,5 @@
 {
-  "name": "tracklife",
+  "name": "association-managment-web-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch DATA/db.json --port 5000"
+    "server": "json-server --watch DATA/db.json --port 5000",
+    "hello": "node scripts/hello.js",
+    "delete-logs": "node scripts/remove-console-logs.mjs --write",
+    "find-logs": "node scripts/remove-console-logs.mjs",
+    "find-duplicates": "node scripts/find-duplicate-keys.mjs",
+    "delete-duplicates": "node scripts/find-duplicate-keys.mjs --write",
+    "find-dead-code": "node scripts/find-dead-code.mjs",
+    "delete-dead-code": "node scripts/find-dead-code.mjs --write"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
@@ -42,17 +49,23 @@
     "tailwindcss": "^4.1.11",
     "vite": "^6.3.5"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "Frontend client for Association Management System",
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zakaria-merabet/tracklife.git"
+    "url": "git+https://github.com/zakariamerabetayache/association-managment-web-app.git",
+    "directory": "frontend"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "vite",
+    "association-management",
+    "association-management-system"
+  ],
+  "author": "Zakaria Merabet Ayache <zakariamerabetayache@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zakaria-merabet/tracklife/issues"
+    "url": "https://github.com/zakariamerabetayache/association-managment-web-app/issues"
   },
-  "homepage": "https://github.com/zakaria-merabet/tracklife#readme"
+  "homepage": "https://github.com/zakariamerabetayache/association-managment-web-app#readme"
 }

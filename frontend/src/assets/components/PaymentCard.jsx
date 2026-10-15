@@ -54,13 +54,11 @@ const PaymentCard = () => {
       price_receipt: state.receipt_path
     });
   }
-  console.log("user OF ETAB", JSON.stringify(user));
   const fetchEtablissement = async () => {
     try {
       setLoading(true);
       const response = await axiosClient.get(`/etablissements/${user.etablissement_id}`);
       setEtablissement(response.data);
-      console.log("response OF ETAB", JSON.stringify(response));
     } catch (error) {
       console.error("Error fetching etablissement:", error);
       message.error(translate("failed_to_load_etablissement") || "Failed to load establishment details");

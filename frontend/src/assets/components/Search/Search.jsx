@@ -12,7 +12,6 @@ export default function Search({
 }) {
   const { translate } = useLanguage();
 
-  console.log("value from search", value);
   
   return (
     <div className="search-container">

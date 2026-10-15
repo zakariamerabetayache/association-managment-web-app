@@ -20,27 +20,20 @@ const EtablissementSettings = () => {
   const [isEditing, setIsEditing] = useState(true);
 
   useEffect(() => {
-    console.log('🔄 useEffect triggered, user changed:', user);
     fetchEtablissementData();
   }, [user]);
 
   const fetchEtablissementData = async () => {
-    console.log('🔍 fetchEtablissementData called');
-    console.log('👤 User:', user);
-    console.log('🏢 User etablissement_id:', user?.etablissement_id);
     
     if (!user?.etablissement_id) {
-      console.log('❌ No etablissement_id found, returning');
       return;
     }
     
     setLoading(true);
     try {
-      console.log('📡 Calling etablissementsService.getById with ID:', user.etablissement_id);
       
       // Fetch establishment data
       const etablissementResponse = await etablissementsService.getById(user.etablissement_id);
-      console.log('📥 Raw response:', etablissementResponse);
       
       // Handle different response structures
       let etablissementData;
@@ -55,7 +48,6 @@ const EtablissementSettings = () => {
         etablissementData = etablissementResponse;
       }
       
-      console.log('📊 Etablissement data:', etablissementData);
       
       if (!etablissementData) {
         console.error('❌ No etablissement data found in response');
@@ -70,10 +62,8 @@ const EtablissementSettings = () => {
         opening_hour: etablissementData?.opening_hour ? dayjs(etablissementData.opening_hour, 'HH:mm') : null,
         closing_hour: etablissementData?.closing_hour ? dayjs(etablissementData.closing_hour, 'HH:mm') : null,
       };
-      console.log('📝 Setting form values:', formValues);
       
       form.setFieldsValue(formValues);
-      console.log('✅ Form values set successfully');
     } catch (error) {
       console.error('❌ Error fetching etablissement data:', error);
       ErrorHandling(error);
@@ -95,12 +85,8 @@ const EtablissementSettings = () => {
       delete formData.wilaya_id;
       delete formData.commune_id;
       
-      console.log('📤 Sending form data:', formData);
-      console.log('🕐 Opening hour:', formData.opening_hour);
-      console.log('🕐 Closing hour:', formData.closing_hour);
 
       const response = await etablissementsService.update(user.etablissement_id, formData);
-      console.log('📥 Update response:', response);
       Swal.fire({
         icon: 'success',
         title: 'تم تحديث المؤسسة بنجاح',
@@ -124,8 +110,6 @@ const EtablissementSettings = () => {
     );
   }
 
-  console.log('📝 Current editing state:', isEditing);
-  console.log('📊 Current etablissement:', etablissement);
   
   return (
     <div style={{ padding: '24px', maxWidth: '1200px', margin: '0 auto' }}>

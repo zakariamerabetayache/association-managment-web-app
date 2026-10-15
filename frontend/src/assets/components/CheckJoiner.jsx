@@ -22,7 +22,6 @@ export default function CheckJoiner({ record }) {
   };
 
   const handleStateChange = async (checked) => {
-    console.log("checked", checked);
     setLoading(true);
     try {
       const newState = checked ? 1 : 0;

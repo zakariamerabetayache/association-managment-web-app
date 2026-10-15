@@ -141,14 +141,12 @@ const usersService = {
    */
   async update(id, userData, config = {}) {
     try {
-      console.log('usersService.update called with:', { id, userData, config });
 
       let requestData = userData;
       let requestConfig = { ...config };
 
       // If userData is FormData (for file uploads), use POST with _method=PUT
       if (userData instanceof FormData) {
-        console.log('FormData detected, using POST with _method=PUT');
         userData.append('_method', 'PUT');
         requestData = userData;
 
@@ -159,13 +157,10 @@ const usersService = {
         };
 
         const response = await axiosClient.post(`/users/${id}`, requestData, requestConfig);
-        console.log('Update response:', response.data);
         return response.data;
       } else {
         // For regular JSON data, use PUT
-        console.log('Regular object detected, using PUT');
         const response = await axiosClient.put(`/users/${id}`, requestData, requestConfig);
-        console.log('Update response:', response.data);
         return response.data;
       }
     } catch (error) {

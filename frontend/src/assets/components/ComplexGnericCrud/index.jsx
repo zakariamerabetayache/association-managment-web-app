@@ -325,7 +325,6 @@ const ComplexGenericCrud = ({ config, service, initialFilters = {} }) => {
   }, [state.modalVisible, state.editingEntity, state.subEntities, employees]);
 
 
-  console.log("state.subEntities", JSON.stringify(state.subEntities));
   const loadEntities = useCallback(async (params = {}) => {
     try {
       dispatch({ type: "SET_LOADING", payload: true });

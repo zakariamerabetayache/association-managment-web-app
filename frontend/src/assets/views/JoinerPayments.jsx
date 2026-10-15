@@ -83,7 +83,6 @@ const JoinerPayments = () => {
         sortBy: 'created_at',
         sortOrder: 'desc',
       };
-      console.log("state" + params.state);
 
       const response = await joinerPaymentsService.getAll(params);
       setPayments(response.data);
@@ -103,7 +102,6 @@ const JoinerPayments = () => {
   const fetchPaymentsWithParams = async (params) => {
     try {
       setLoading(true);
-      console.log("Fetching with state:", params.state);
 
       const response = await joinerPaymentsService.getAll(params);
       setPayments(response.data);
@@ -162,19 +160,13 @@ const JoinerPayments = () => {
         return;
       }
 
-      console.log('Selected file:', selectedFile);
-      console.log('File name:', selectedFile.name);
-      console.log('File size:', selectedFile.size);
-      console.log('File type:', selectedFile.type);
 
       setUploading(true);
 
       const formData = new FormData();
       formData.append('pdf', selectedFile);
 
-      console.log('FormData entries:');
       for (let [key, value] of formData.entries()) {
-        console.log(key, value);
       }
 
       const response = await joinerPaymentsService.create(formData);
@@ -559,7 +551,6 @@ const JoinerPayments = () => {
             </label>
             <Upload
               beforeUpload={(file) => {
-                console.log('File selected:', file);
                 setSelectedFile(file);
                 return false; // Prevent automatic upload
               }}

@@ -71,15 +71,11 @@ const DashboardNew = () => {
 
   // Fetch dashboard data
   const fetchDashboardData = async () => {
-    console.log('Fetching dashboard data for:', { month: selectedMonth, year: selectedYear });
     try {
       setLoading(true);
-      console.log('Calling dashboardService.getDashboardStats...');
       const response = await dashboardService.getDashboardStats(selectedMonth, selectedYear);
-      console.log('API Response:', response);
 
       if (response && response.data) {
-        console.log('Setting stats with data:', response.data);
         // Map the backend response to match frontend expected structure
         const statsData = {
           ...response.data,
@@ -97,7 +93,6 @@ const DashboardNew = () => {
           check_outs: response.data.check_outs || 0,
         };
 
-        console.log('Processed stats data:', statsData);
         setStats(statsData);
       } else {
         console.warn('No data received from API');

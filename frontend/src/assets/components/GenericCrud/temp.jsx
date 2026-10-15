@@ -461,7 +461,6 @@ const GenericCruddd = ({ config, service, initialFilters = {} }) => {
       // Separate file fields from regular form data
       const formData = { ...state.formData };
       const fileFields = {};
-      console.log("form from generic crud " + JSON.stringify(formData))
 
       // Identify file fields based on config
       config.fields.forEach(field => {
@@ -515,8 +514,6 @@ const GenericCruddd = ({ config, service, initialFilters = {} }) => {
         });
       } else {
 
-        console.log("formData", JSON.stringify(formData));
-        console.log("config.silencevalues", JSON.stringify(config.silencevalues));
         response = await service.create({
           ...config.silencevalues,
           ...formData,
@@ -755,7 +752,6 @@ const GenericCruddd = ({ config, service, initialFilters = {} }) => {
   // Render form field based on type
   const renderFormField = (field, fieldKey) => {
     const fieldValue = state.formData[fieldKey];
-    console.log('Field value fieldValue:', fieldValue);
     const fieldError = state.formErrors[fieldKey];
 
     const handleFieldChangeWrapper = (value) => {
@@ -766,7 +762,6 @@ const GenericCruddd = ({ config, service, initialFilters = {} }) => {
           payload: fieldKey,
         });
       }
-      console.log('Field change:', fieldKey, value);
       handleFieldChange(fieldKey, value);
     };
 

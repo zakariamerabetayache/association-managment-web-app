@@ -88,7 +88,6 @@ const JoinerChecksHistory = () => {
   const fetchCheckRecords = async () => {
     try {
       setLoading(true);
-      console.log('Fetching check records with filters:', filters);
       const response = await axiosClient.get('/check-in-outs/joiner/history', {
         params: {
           start_date: filters.start_date,
@@ -96,12 +95,10 @@ const JoinerChecksHistory = () => {
           per_page: 15
         }
       });
-      console.log('API Response:', response.data);
 
       // Handle new API response format
       const records = Array.isArray(response.data.data) ? response.data.data : [];
       setCheckRecords(records);
-      console.log("check records" + JSON.stringify(records))
 
       // Use statistics from backend
       if (response.data.statistics) {

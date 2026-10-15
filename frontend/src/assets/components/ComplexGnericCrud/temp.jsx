@@ -270,8 +270,6 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
             // Handle both array and paginated responses
             const entities = response.data ? response.data : response;
 
-            console.log(" state.entities[lines]", JSON.stringify(state.entities["lines"]));
-            console.log("entities", JSON.stringify(entities));
             const pagination = response.pagination;
 
             dispatch({
@@ -361,10 +359,8 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
             // Load options for all sub-entity fields that have loadOptions
             config.subEntityFields.forEach(async (field) => {
                 if (field.loadOptions && field.type === 'select') {
-                    console.log(`Loading options for sub-entity field: ${field.key}`);
                     try {
                         const options = await field.loadOptions();
-                        console.log(`Loaded ${options.length} options for ${field.key}:`, options);
                         setDynamicOptions((prev) => ({
                             ...prev,
                             [field.key]: options,
@@ -624,7 +620,6 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
                     [config.subEntityTitle]: subdata
                 };
 
-                console.log("storeData", JSON.stringify(storeData));
                 response = await service.create(storeData);
 
                 // Add the new entity to the state
@@ -720,7 +715,6 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
     function handleSubDelete(record) {
 
         dispatch({ type: "SET_LOADING", payload: true });
-        console.log("action.payload", JSON.stringify(record))
 
 
         dispatch({ type: "DELETE_IN_SUB_TABLE", payload: record })
@@ -803,7 +797,6 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
         if (!validateSubEntityForm()) {
             return;
         }
-        console.log("state.subformData", state.subformData)
 
         // Merge silence values with form data
         let baseData = {
@@ -838,7 +831,6 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
     };
 
     const handleShowSubEntities = (entity) => {
-        console.log("entity from showSubEntitiesModal", entity)
         dispatch({ type: "SHOW_SUB_ENTITIES_MODAL", payload: entity });
     };
 
@@ -920,8 +912,6 @@ const ComplexGenericCrudd = ({ config, service, initialFilters = {} }) => {
 
 
 
-        console.log("formdata", JSON.stringify(state.formData));
-        console.log("subformdata", JSON.stringify(state.subformData));
         if (isSubEntity) {
             config.subEntityFields.forEach((field) => {
                 if (field.relation === fieldKey) {

@@ -56,7 +56,6 @@ const paymentsService = {
       };
     } catch (error) {
       if (axios.isCancel(error)) {
-        console.log("Request canceled");
         return { data: [], total: 0 };
       }
       ErrorHandling(error);

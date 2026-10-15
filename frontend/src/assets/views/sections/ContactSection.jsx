@@ -9,7 +9,6 @@ const ContactSection = ({ translate, isRTL, onInquire, onDonate }) => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log('Form values:', values);
     message.success(translate('message_sent') || 'تم إرسال رسالتك بنجاح!');
     form.resetFields();
   };

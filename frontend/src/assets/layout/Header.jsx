@@ -27,7 +27,6 @@ export default function Header({ isMobile }) {
 
   useEffect(() => {
     getJoinerRequests();
-    console.log("it is time to get joiner requests")
   }, [user?.id]);
   // Notification functions
   const getJoinerRequests = async () => {

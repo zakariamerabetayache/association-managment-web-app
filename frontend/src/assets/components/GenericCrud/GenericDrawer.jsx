@@ -58,8 +58,6 @@ const GenericDrawer = () => {
 
                 const options = await field.loadOptions(relationValue, config.params);
                 if (fieldKey === "employee_spouse_id") {
-                    console.log("params from GenericDrawer", JSON.stringify(config.params));
-                    console.log("options from GenericDrawer", JSON.stringify(options));
                 }
 
                 // Cache the result
@@ -265,14 +263,11 @@ const GenericDrawer = () => {
                 }
             });
 
-            console.log('Data about to be sent to backend:', formData);
 
             let entityId;
 
             if (state.editingEntity) {
 
-                console.log('formData:', JSON.stringify(formData));
-                console.log('state.editingEntity:', JSON.stringify(state.editingEntity));
 
                 entityId = state.editingEntity.id;
                 response = await service.update(entityId, formData);
@@ -282,7 +277,6 @@ const GenericDrawer = () => {
                     ...config.silencevalues,
                     ...formData,
                 });
-                console.log('response from create drawer:', JSON.stringify(config.silencevalues));
 
                 // Extract entity ID from response
                 entityId = response?.id ||
@@ -356,7 +350,6 @@ const GenericDrawer = () => {
                     payload: fieldKey,
                 });
             }
-            console.log('Field change:', fieldKey, value);
             handleFieldChange(fieldKey, value);
         };
 

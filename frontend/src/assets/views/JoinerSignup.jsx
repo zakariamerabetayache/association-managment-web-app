@@ -116,21 +116,15 @@ const JoinerSignup = () => {
 
     // Validate sex
     if (sex !== undefined && nin.length >= 2) {
-      console.log("nin 1 " + nin[1]);
-      console.log("sex " + sex);
 
       if (nin[1] !== sex.toString()) {
-        console.log("error sex");
         isError = true;
       }
     }
 
     // Validate certificate number (nb_crt)
-    console.log("cnais " + nb_crt);
-    console.log("nin cn " + nin.slice(9, 14));
     if (nb_crt && nin.length >= 14) {
       if (parseInt(nin.slice(9, 14), 10) != nb_crt) {
-        console.log("error cnais");
         isError = true;
       }
     }
@@ -140,10 +134,7 @@ const JoinerSignup = () => {
       // Extract last 2 digits of year (e.g., '03' from '2003-05-15')
       const birthYear = date_nais.slice(1, 4);
       const ninYear = nin.slice(2, 5); // Get positions 2-3 from NIN
-      console.log("birth year (last 2 digits): " + birthYear);
-      console.log("nin year: " + ninYear);
       if (birthYear !== ninYear) {
-        console.log("error date_nais");
         isError = true;
       }
     }
@@ -187,14 +178,9 @@ const JoinerSignup = () => {
     setLoading(true);
 
     try {
-      console.log('=== FORM SUBMISSION START ===');
-      console.log('Form values received:', values);
-      console.log('Number of fields received:', Object.keys(values).length);
-      console.log('All form fields from form instance:', form.getFieldsValue(true));
 
       // Use form instance values as backup
       const allFormValues = { ...form.getFieldsValue(true), ...values };
-      console.log('Combined form values:', allFormValues);
 
       const formData = new FormData();
 
@@ -204,9 +190,7 @@ const JoinerSignup = () => {
           let value = allFormValues[key];
 
           formData.append(key, value);
-          console.log(`Added ${key}:`, value);
         } else {
-          console.log(`Skipped ${key}: value is`, allFormValues[key]);
         }
       });
 
@@ -216,22 +200,18 @@ const JoinerSignup = () => {
       // Add identity image if uploaded
       if (fileList.length > 0 && fileList[0].originFileObj) {
         formData.append('identity_image', fileList[0].originFileObj);
-        console.log('Added identity_image:', fileList[0].name);
       }
 
       // Add self photo if uploaded
       if (selfPhotoList.length > 0 && selfPhotoList[0].originFileObj) {
         formData.append('self_photo', selfPhotoList[0].originFileObj);
-        console.log('Added self_photo:', selfPhotoList[0].name);
 
       }
       formData.append('etablissement_id', 1);
 
 
       // Log all FormData entries for debugging
-      console.log('FormData entries:');
       for (let [key, value] of formData.entries()) {
-        console.log(`${key}:`, value);
       }
 
       const response = await axiosClient.post('/joiners/register', formData, {
@@ -268,7 +248,6 @@ const JoinerSignup = () => {
 
     form.validateFields(currentStepFields).then(() => {
       const formValues = form.getFieldsValue();
-      console.log(`Step ${currentStep} validation passed. Current form values:`, formValues);
 
       // Additional NIN validation for step 0 (Personal Info + NIN)
       if (currentStep === 0) {
@@ -280,7 +259,6 @@ const JoinerSignup = () => {
 
       setCurrentStep(currentStep + 1);
     }).catch((errorInfo) => {
-      console.log('Validation failed for step', currentStep, errorInfo);
       message.error(translate('fill_required_fields') || 'Please fill all required fields in this step');
     });
   };

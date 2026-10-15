@@ -70,7 +70,6 @@ const PDFDemo = () => {
           <ParentalAuthorizationPDF 
             child={sampleChild}
             onDownload={(filename) => {
-              console.log('Downloaded:', filename);
             }}
           />
         </Card>
@@ -104,7 +103,6 @@ const PDFDemo = () => {
           <CompanionAuthorizationPDF 
             companion={sampleCompanion}
             onDownload={(filename) => {
-              console.log('Downloaded:', filename);
             }}
           />
         </Card>
