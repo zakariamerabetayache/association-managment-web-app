@@ -10,105 +10,51 @@ const lang = {
   register: "تسجيل",
   or: "أو",
   already_have_account_login: "لديك حساب بالفعل؟ تسجيل الدخول",
-  name: "الاسم",
   email: "البريد الإلكتروني",
   password: "كلمة المرور",
   country: "البلد",
   tracklife: "تراك لايف",
   // Gender
   sex: "الجنس",
-  male: "ذكر",
-  female: "أنثى",
   please_select_sex: "الرجاء اختيار الجنس",
 
   // Navigation
-  home: "الرئيسية",
-  about: "حول",
-  services: "الخدمات",
-  contact: "اتصل بنا",
-  dashboard: "لوحة التحكم",
-  profile: "الملف الشخصي",
-  settings: "الإعدادات",
-  logout: "تسجيل الخروج",
-  login: "تسجيل الدخول",
   enter_your_login_details: "أدخل بياناتك للوصول إلى حسابك",
   login_error: "خطأ في تسجيل الدخول",
   signup: "إنشاء حساب جديد",
-  features: "الميزات",
   back_to_home: "العودة إلى الصفحة الرئيسية",
   not_have_an_account: "ليس لديك حساب؟",
   pricing: "التسعير",
-  support: "الدعم",
   customers: "العملاء",
   users_list: "المستخدمون",
   users: "المستخدمين",
   Users: "المستخدمين",
   invoices: "الفواتير",
   quote: "عرض السعر",
-  payments: "المدفوعات",
   payments_mode: "طرق الدفع",
   taxes: "الضرائب",
   profile_settings: "إعدادات الملف الشخصي",
   app_settings: "إعدادات التطبيق",
-  products: "المنتجات",
 
   // Common actions
-  save: "حفظ",
-  cancel: "إلغاء",
-  delete: "حذف",
-  edit: "تعديل",
-  add: "إضافة",
-  update: "تحديث",
-  submit: "إرسال",
-  search: "بحث",
-  filter: "تصفية",
   sort: "ترتيب",
-  view: "عرض",
-  actions: "الإجراءات",
-  refresh: "تحديث",
-  add_new: "إضافة جديد",
 
   // CRUD specific
-  add_new_item: "إضافة عنصر جديد",
-  edit_item: "تعديل العنصر",
-  item_details: "تفاصيل العنصر",
-  details: "التفاصيل",
-  this_item: "هذا العنصر",
-  delete_confirmation_message:
-    "هل أنت متأكد من حذف {item}؟ لا يمكن التراجع عن هذا الإجراء.",
-  delete_warning: "لا يمكن التراجع عن هذا الإجراء.",
-  created_at: "تاريخ الإنشاء",
   updated_at: "تاريخ التحديث",
-  showing_entries: "عرض {start} إلى {end} من {total} إدخال",
 
   // User fields
-  first_name: "الاسم الأول",
-  family_name: "اسم العائلة",
-  role: "الدور",
-  owner: "مالك",
-  client: "عميل",
 
   // User role values
-  admin: "مدير",
-  manager: "مسير",
-  associate: "مساعد",
-  parent: "ولي",
-  joiner: "منخرط",
-  joiners: "المنخرطين",
   joiner_requests: "إكمال الملفات",
   joiner_request: "طلب المنخرط",
   create_request: "إضافة طلب منخرط",
   request_type: "نوع الطلب",
   request_description: "وصف الطلب",
-  summon_order: "أمر بإستدعاء",
-  file_order: "إدراج ملف",
   please_select_request_type: "يرجى اختيار نوع الطلب",
-  please_enter_description: "يرجى إدخال وصف الطلب",
   enter_request_description: "اكتب وصف مفصل للطلب...",
   set_request: "إضافة طلب للمنخرط",
   request: "طلب",
   national: "مسير وطني",
-  wilaya: "مسير ولائي",
   baladi: "مسير بلدي",
   printer: "طابع",
   NATIONAL: "مسير وطني",
@@ -117,10 +63,7 @@ const lang = {
   PRINTER: "طابع",
   JOINER: "منخرط",
   profession: "المهنة",
-  joining_type: "نوع الانخراط",
-  select_joining_type: "اختر نوع الانخراط",
   please_enter_profession: "يرجى إدخال المهنة",
-  please_select_joining_type: "يرجى اختيار نوع الانخراط",
   joining_types: "أنواع الانخراط",
   joining_date: "تاريخ الانخراط",
   expiration_date: "تاريخ انتهاء الصلاحية",
@@ -130,35 +73,18 @@ const lang = {
   download_back: "تحميل الوجه الخلفي",
   download_card: "تحميل البطاقة",
   card: "البطاقة",
-  joining_type: "نوع الانخراط",
   card_validity: "صلاحية البطاقة",
   enrollment_code: "رمز الانخراط",
-  please_enter_designation_ar: "يرجى إدخال التسمية بالعربية",
-  please_enter_designation_fr: "يرجى إدخال التسمية بالفرنسية",
   please_select_card_validity: "يرجى اختيار صلاحية البطاقة",
   please_select_enrollment_code: "يرجى اختيار رمز الانخراط",
-  joiner_dashboard_subtitle: "لوحة تحكم المنخرط",
-  manage_my_payments: "إدارة مدفوعاتي",
-  view_payment_history: "عرض سجل المدفوعات",
-  manage_profile: "إدارة حسابك",
-  pending_approval: "في الانتظار",
-  unknown: "غير معروف",
-  companion: "مرافق",
-  production_agent: "عامل إنتاج",
-  seller: "بائع",
-  counter_seller: "بائع عداد",
-  seller_production: "مبيعات وإنتاج",
 
   // Form placeholders and validation
   select_firstName: "اختر الاسم الأول",
   select_familyName: "اختر اسم العائلة",
-  select_role: "اختر الدور",
   enter_firstName: "أدخل الاسم الأول",
   enter_familyName: "أدخل اسم العائلة",
-  enter_role: "أدخل الدور",
   firstName_required: "الاسم الأول مطلوب",
   familyName_required: "اسم العائلة مطلوب",
-  role_required: "الدور مطلوب",
 
   // Messages
   success: "نجح",
@@ -167,8 +93,6 @@ const lang = {
   info: "معلومات",
   loading: "جاري التحميل...",
   no_data: "لا توجد بيانات متاحة",
-  confirm_delete: "هل أنت متأكد من الحذف؟",
-  ok: "موافق",
 
   // Error handling messages
   network_error: "خطأ في الشبكة",
@@ -190,13 +114,9 @@ const lang = {
   try_again_later: "يرجى المحاولة مرة أخرى خلال بضع دقائق.",
   unknown_error: "حدث خطأ غير معروف",
   error_occurred: "خطأ",
-  contact_support: "إذا استمرت المشكلة، يرجى الاتصال بالدعم.",
 
   // Form validation
   required_field: "هذا الحقل مطلوب",
-  invalid_email: "عنوان بريد إلكتروني غير صالح",
-  min_length_error: "الحد الأدنى للطول هو {min} حرف",
-  max_length_error: "الحد الأقصى للطول هو {max} حرف",
   afghanistan: "أفغانستان",
   albania: "ألبانيا",
   algeria: "الجزائر",
@@ -233,9 +153,7 @@ const lang = {
   canada: "كندا",
   // Navigation
   home: "الرئيسية",
-  about: "حول",
   services: "الخدمات",
-  contact: "اتصل بنا",
   dashboard: "لوحة التحكم",
   profile: "الملف الشخصي",
   settings: "الإعدادات",
@@ -243,21 +161,10 @@ const lang = {
   login: "تسجيل الدخول",
   // Common actions
   save: "حفظ",
-  cancel: "إلغاء",
-  delete: "حذف",
-  edit: "تعديل",
-  add: "إضافة",
-  update: "تحديث",
   submit: "إرسال",
   search: "بحث",
   filter: "تصفية",
 
-  check_in_outs_description: "إدارة تسجيلات دخول وخروج الأطفال",
-  welcome: "مرحباً",
-  admin_dashboard_subtitle: "إدارة شاملة لمركز رعاية الأطفال",
-  today_check_ins: "تسجيلات الدخول اليوم",
-  today_check_outs: "تسجيلات الخروج اليوم",
-  total_today_records: "إجمالي التسجيلات اليوم",
   confirm_checker: "تأكيد الشخص المتحقق",
   is_this_the_correct_person: "هل هذا هو الشخص الصحيح؟",
   staff_member: "عضو في الطاقم",
@@ -275,15 +182,12 @@ const lang = {
   add_new_item: "إضافة عنصر جديد",
   edit_item: "تعديل العنصر",
   item_details: "تفاصيل العنصر",
-  view: "عرض",
-  actions: "الإجراءات",
   refresh: "تحديث",
   showing_entries: "عرض {start} إلى {end} من {total} إدخال",
 
   // User fields
   first_name: "الاسم الأول",
   family_name: "اسم العائلة",
-  role: "الدور",
   owner: "مالك",
   client: "عميل",
 
@@ -301,38 +205,22 @@ const lang = {
   max_length_error: "الحد الأقصى للطول هو {max} أحرف",
 
   // Delete confirmation
-  confirm_delete: "تأكيد الحذف",
   delete_confirmation_message: "هل أنت متأكد من أنك تريد حذف {item}؟",
   delete_warning: "لا يمكن التراجع عن هذا الإجراء.",
   this_item: "هذا العنصر",
-  actions: "الإجراءات",
-  view: "عرض",
   deleted_successfully: "تم الحذف بنجاح",
   failed_to_delete: "فشل في الحذف",
   are_you_sure_delete: "هل أنت متأكد من حذف هذا",
-  yes: "نعم",
-  no: "لا",
 
   // Product Categories
-  electronics: "إلكترونيات",
-  accessories: "إكسسوارات",
-  furniture: "أثاث",
-  software: "برمجيات",
 
   // Status translations
-  status: "الحالة",
 
   // Product Status
-  active: "نشط",
-  inactive: "غير نشط",
-  out_of_stock: "نفد من المخزون",
-  low_stock: "مخزون منخفض",
 
   // Common Status Values
   enabled: "مفعل",
   disabled: "معطل",
-  pending: "في الانتظار",
-  approved: "موافق عليه",
   rejected: "مرفوض",
   draft: "مسودة",
   published: "منشور",
@@ -340,36 +228,21 @@ const lang = {
 
   // Form validation
   please_enter_user_id: "يرجى إدخال معرف المستخدم",
-  please_select_user: "يرجى اختيار مستخدم",
-  please_enter_product_name: "يرجى إدخال اسم المنتج",
-  please_enter_description: "يرجى إدخال الوصف",
-  please_enter_price: "يرجى إدخال السعر",
-  please_select_category: "يرجى اختيار الفئة",
-  please_enter_stock_quantity: "يرجى إدخال كمية المخزون",
-  please_select_status: "يرجى اختيار الحالة",
 
   // Table headers
   user: "المستخدم",
   name: "الاسم",
-  description: "الوصف",
-  price: "السعر",
-  category: "الفئة",
-  stock: "المخزون",
   actions: "الإجراءات",
 
   // Filters
   select_status: "اختر الحالة",
   select_category: "اختر الفئة",
   reset_filters: "إعادة تعيين المرشحات",
-  reset: "إعادة تعيين",
   // Pagination
   items: "عنصر",
-  of: "من",
   // Confirmation messages
   are_you_sure_delete_product: "هل أنت متأكد من حذف هذا المنتج؟",
   this_action_cannot_be_undone: "لا يمكن التراجع عن هذا الإجراء.",
-  yes: "نعم",
-  no: "لا",
   close: "إغلاق",
   // Common actions
   select: "اختر",
@@ -389,8 +262,6 @@ const lang = {
   prenom_fr: "الاسم الشخصي بالفرنسية",
   role: "الدور",
   application: "التطبيق",
-  admin: "مدير",
-  manager: "مسؤول",
   staff: "موظف",
   student: "طالب",
   main_app: "التطبيق الرئيسي",
@@ -400,19 +271,12 @@ const lang = {
   please_enter_nom_fr: "يرجى إدخال الاسم العائلي بالفرنسية",
   please_enter_prenom_ar: "يرجى إدخال الاسم الشخصي بالعربية",
   please_enter_prenom_fr: "يرجى إدخال الاسم الشخصي بالفرنسية",
-  please_enter_email: "يرجى إدخال البريد الإلكتروني",
-  please_enter_valid_email: "يرجى إدخال بريد إلكتروني صالح",
-  please_enter_password: "يرجى إدخال كلمة المرور",
-  password_min_6_characters: "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
   please_select_role: "يرجى اختيار الدور",
   please_select_application: "يرجى اختيار التطبيق",
 
   // Role labels for users system
-  administrator: "مدير النظام",
   production_agent: "وكيل الإنتاج",
   salesperson: "مندوب مبيعات",
-  counter_seller: "بائع المنضدة",
-  seller_production: "المبيعات والإنتاج",
   all: "الكل",
 
   // Password confirmation
@@ -420,7 +284,6 @@ const lang = {
   please_enter_password_confirmation: "يرجى إدخال تأكيد كلمة المرور",
 
   // Additional user role translations
-  seller: "بائع",
 
   // Landing page translations
   company_name: "جستيون التجاري",
@@ -487,12 +350,7 @@ const lang = {
   products: "المنتجات",
   product: "منتج",
   product_name: "اسم المنتج",
-  price: "السعر",
-  category: "الفئة",
   stock_quantity: "كمية المخزون",
-  status: "الحالة",
-  active: "نشط",
-  inactive: "غير نشط",
   out_of_stock: "نفد المخزون",
   low_stock: "مخزون منخفض",
   electronics: "إلكترونيات",
@@ -500,7 +358,6 @@ const lang = {
   furniture: "أثاث",
   software: "برمجيات",
   please_enter_product_name: "يرجى إدخال اسم المنتج",
-  please_enter_price: "يرجى إدخال السعر",
   please_enter_stock_quantity: "يرجى إدخال كمية المخزون",
   please_select_category: "يرجى اختيار الفئة",
   please_select_status: "يرجى اختيار الحالة",
@@ -509,13 +366,9 @@ const lang = {
   // Etablissements
   etablissements: "المؤسسات",
   etablissement: "مؤسسة",
-  designation_ar: "الاسم بالعربية",
-  designation_fr: "الاسم بالفرنسية",
   users_count: "عدد المستخدمين",
   with_users: "مع مستخدمين",
   without_users: "بدون مستخدمين",
-  please_enter_designation_ar: "يرجى إدخال الاسم بالعربية",
-  please_enter_designation_fr: "يرجى إدخال الاسم بالفرنسية",
   please_select_commune: "يرجى اختيار البلدية",
   establishment_parameters: "إعدادات المؤسسة",
   manage_establishment_settings_desc: "إدارة إعدادات المؤسسة الخاصة بك",
@@ -524,11 +377,9 @@ const lang = {
   changes_saved_automatically: "يتم حفظ التغييرات تلقائيًا",
   no_establishment_associated: "لا توجد مؤسسة مرتبطة بحسابك.",
   parameter_updated: "تم تحديث الإعدادات",
-  joiner_name: "اسم المنخرط",
   request_state: "حالة الطلب",
 
   // Footer
-  footer_description: "الحل الشامل لتحسين إدارتك التجارية وتنمية أعمالك.",
   useful_links: "روابط مفيدة",
   support: "الدعم",
   documentation: "التوثيق",
@@ -558,8 +409,6 @@ const lang = {
   without_produits: "بدون منتجات",
   designation_ar_required: "التسمية بالعربية مطلوبة",
   designation_fr_required: "التسمية بالفرنسية مطلوبة",
-  enter_designation_ar: "أدخل التسمية بالعربية",
-  enter_designation_fr: "أدخل التسمية بالفرنسية",
 
   // Categories translations
   categories: "الفئات",
@@ -630,13 +479,11 @@ const lang = {
   we_will_review_your_request: "سنقوم بمراجعة طلبك والرد عليك في أقرب وقت ممكن.",
   status_under_review: "قيد المراجعة",
   need_help: "تحتاج مساعدة؟",
-  contact_support: "اتصل بالدعم",
 
   // User role translations
   administrator: "مدير",
   manager: "مسير",
   parent: "ولي",
-  associate: "مساعد",
   seller: "بائع",
   counter_seller: "بائع عداد",
   seller_production: "مبيعات وإنتاج",
@@ -673,14 +520,10 @@ const lang = {
   logo_available_after_creation: "يمكن إضافة الشعار بعد إنشاء المؤسسة",
   yes: "نعم",
   no: "لا",
-  is_privet: "خاص بالمنخرط",
-  member_name: "اسم المنخرط",
   file_must_be_pdf: "يجب أن يكون الملف بصيغة PDF",
   pdf_must_smaller_than_10mb: "يجب أن يكون ملف PDF أصغر من 10 ميجابايت",
-  upload_pdf: "رفع ملف PDF",
   drag_or_click_pdf_to_upload: "اسحب أو انقر لرفع ملف PDF",
   pdf_upload_hint: "الصيغة المدعومة: PDF فقط",
-  pdf_file: "ملف PDF",
 
   // Childcare Center Translations
   // Landing Page - Childcare Center
@@ -691,15 +534,11 @@ const lang = {
   register_as_parent: "التسجيل كولي أمر",
   staff_login: "دخول الموظفين",
   trusted_by_families: "موثوق من قبل أكثر من 250 عائلة",
-  years_experience: "15+ سنة من الخبرة",
   qualified_educators: "مربون مؤهلون",
 
   // Services/Features
-  our_childcare_services: "خدمات رعاية الأطفال",
-  comprehensive_care_description: "خدمات شاملة للرعاية والتعليم مصممة لتعزيز نمو طفلك في بيئة آمنة ومحبة",
   early_childhood_education: "تعليم الطفولة المبكرة",
   early_education_desc: "برامج تعلم مبكرة مناسبة للعمر لتحفيز فضول وإبداع طفلك.",
-  nutritious_meals: "وجبات مغذية",
   nutritious_meals_desc: "وجبات متوازنة ووجبات خفيفة صحية يتم إعدادها يومياً من قبل أخصائيي التغذية المؤهلين.",
   safe_environment: "بيئة آمنة",
   safe_environment_desc: "مرافق آمنة مع مراقبة على مدار الساعة وبروتوكولات أمان صارمة لراحة بالك.",
@@ -711,10 +550,6 @@ const lang = {
   parent_communication_desc: "تحديثات منتظمة وتواصل مفتوح حول تقدم وأنشطة طفلك.",
 
   // Stats Section
-  happy_children: "أطفال سعداء",
-  qualified_staff: "موظفون مؤهلون",
-  years_of_experience: "سنوات الخبرة",
-  parent_satisfaction: "رضا الأهل",
 
   // About Section - Childcare
   about_childcare_center: "عن مركزنا",
@@ -728,18 +563,14 @@ const lang = {
 
   // CTA Section
   ready_best_care: "مستعد لتقديم أفضل رعاية لطفلك؟",
-  join_loving_community: "انضم إلى مجتمعنا المحب اليوم. سجل كولي أمر للبدء، أو اتصل بنا لمعرفة المزيد عن برامجنا وخدماتنا.",
   questions_contact: "أسئلة؟ اتصل بنا على (555) 123-4567 أو أرسل بريد إلكتروني إلى info@childcarecenter.com",
 
   // Footer - Childcare
   childcare_center_name: "مركز رعاية الأطفال",
   nurturing_future_tagline: "تنشئة مستقبل طفلك بالحب والرعاية والتعليم المهني. شريك موثوق في رحلة تطوير طفلك.",
-  quick_links: "روابط سريعة",
   our_services: "خدماتنا",
   about_us: "عنا",
-  parent_registration: "تسجيل الأهل",
   contact_support: "دعم الاتصال",
-  contact_information: "معلومات الاتصال",
   email_info: "البريد الإلكتروني: info@childcarecenter.com",
   phone_info: "الهاتف: (555) 123-4567",
   address_info: "العنوان: 123 شارع الرعاية، المدينة، الولاية 12345",
@@ -748,15 +579,8 @@ const lang = {
 
   // Joiner System
   joiner: "منخرط",
-  joiners: "المنخرطون",
   associate: "مساعد",
-  associates: "مساعدون",
-  companion: "مرافق",
-  companions: "مرافقون",
-  child: "طفل",
-  children: "أطفال",
   add_companion: "إضافة مرافق",
-  add_child: "إضافة طفل",
   manage_companions: "إدارة المرافقين",
   manage_children: "إدارة الأطفال",
   joiner_details: "تفاصيل المنخرط",
@@ -769,7 +593,6 @@ const lang = {
   welcome_back: "مرحباً بك",
   joiner_dashboard_description: "قم بإدارة مساهماتك وأنشطتك من لوحة التحكم الشخصية الخاصة بك.",
   total_companions: "إجمالي المرافقين",
-  total_children: "إجمالي الأطفال",
   manage_companions_description: "أضف وأدر الأشخاص المخولين لمرافقة أطفالك.",
   manage_children_description: "أضف وأدر معلومات أطفالك المسجلين في المركز.",
   recent_items: "العناصر الحديثة",
@@ -799,20 +622,12 @@ const lang = {
 
   // Children Management Translations
   failed_to_load_children: "فشل في تحميل الأطفال",
-  child_deleted_successfully: "تم حذف الطفل بنجاح",
   failed_to_delete_child: "فشل في حذف الطفل",
-  child_updated_successfully: "تم تحديث الطفل بنجاح",
   child_created_successfully: "تم إنشاء الطفل بنجاح",
   failed_to_update_child: "فشل في تحديث الطفل",
   failed_to_create_child: "فشل في إنشاء الطفل",
-  confirm_delete_child: "تأكيد حذف الطفل",
-  no_children_found: "لم يتم العثور على أطفال",
-  edit_child: "تعديل الطفل",
-  blood_type: "فصيلة الدم",
-  select_blood_type: "اختر فصيلة الدم",
   please_select_date_nais: "يرجى اختيار تاريخ الميلاد",
   select_date_nais: "اختر تاريخ الميلاد",
-  age: "العمر",
   years_old: "سنة",
   months_old: "شهر",
   days_old: "يوم",
@@ -840,15 +655,10 @@ const lang = {
   direct_communication_staff: "التواصل المباشر مع الموظفين",
 
   // GuestLayout Content - Staff Mode
-  staff_administration: "الموظفون والإدارة",
-  childcare_management_system: "نضام إدارة روضة الحسناء",
-  staff_platform_description: "منصة شاملة لموظفي روضة الحسناء لإدارة الأطفال والأولياء والروتين اليومي مع تقارير متقدمة",
 
   // GuestLayout Content - Joiner Mode
   joiner_portal: "بوابة المنخرط",
-  your_child_journey: "رحلة طفلك",
   joiner_platform_description: "ابق على تواصل مباشر معنا لتتبع أنشطتك ومساهماتك في بيئة آمنة ومنظمة",
-  years: "سنة",
   months: "شهر",
 
   // General translations
@@ -880,11 +690,6 @@ const lang = {
   filter_by_etablissement: "تصفية حسب المؤسسة",
 
   // Owner Fields Translations
-  owner_name_ar: "اسم المالك بالعربية",
-  owner_name_fr: "اسم المالك بالفرنسية",
-  owner_last_name_ar: "لقب المالك بالعربية",
-  owner_last_name_fr: "لقب المالك بالفرنسية",
-  rip: "رقم التعريف الضريبي",
   owner_name_ar_max_255: "اسم المالك بالعربية يجب أن يكون أقل من 255 حرف",
   owner_name_fr_max_255: "اسم المالك بالفرنسية يجب أن يكون أقل من 255 حرف",
   owner_last_name_ar_max_255: "لقب المالك بالعربية يجب أن يكون أقل من 255 حرف",
@@ -893,8 +698,6 @@ const lang = {
 
   // Admin Views
   joiners: "المنخرطون",
-  companions: "المرافقون",
-  children: "الأطفال",
 
   // Landing Page Translations
   child_development_tracking: "تتبع تطور الطفل",
@@ -924,7 +727,6 @@ const lang = {
   questions_contact_us: "أسئلة؟ اتصل بنا على (555) 123-4567 أو راسلنا على info@childcarecenter.com",
   footer_description: "رعاية مستقبل طفلك بالحب والعناية والتعليم المهني. شريك موثوق في رحلة نمو طفلك",
   quick_links: "روابط سريعة",
-  parent_registration: "تسجيل الأعضاء",
 
   // GuestLayout Content - Staff Mode
   staff_administration: "إدارة الجمعية",
@@ -962,7 +764,6 @@ const lang = {
   order_state: "حالة الطلب",
   pdf_state: "حالة الملف",
   created_at: "تاريخ الإنشاء",
-  parent_name: "اسم الولي",
   creator_name: "اسم المنشئ",
   summon_order: "طلب استدعاء",
   file_order: "طلب ملف",
@@ -996,14 +797,10 @@ const lang = {
 
   // CheckParent component
   parent_details: "تفاصيل الولي",
-  arabic_name: "الاسم العربي",
   latin_name: "الاسم اللاتيني",
   arabic_surname: "اللقب العربي",
   latin_surname: "اللقب اللاتيني",
-  email_address: "البريد الإلكتروني",
-  phone_number: "رقم الهاتف",
   national_id: "رقم التعريف الوطني",
-  gender: "الجنس",
   birth_date: "تاريخ الميلاد",
 
   // File upload translations
@@ -1014,12 +811,8 @@ const lang = {
   // Payment translations
   no_child_assigned: "لا يوجد طفل",
   add_child: "إضافة طفل",
-  payment_id: "رقم الدفعة",
-  child: "طفل",
-  certificate_number: "رقم شهادة التعريف",
   male: "ذكر",
   female: "أنثى",
-  not_specified: "غير محدد",
   account_status: "حالة الحساب",
   active: "نشط",
   inactive: "غير نشط",
@@ -1034,17 +827,9 @@ const lang = {
   enter_order_description: "أدخل وصف الطلب",
 
   // Payment system translations
-  payment_required: "الدفع مطلوب",
-  payment_instruction: "تم الموافقة على حسابك! يرجى إكمال الدفع عبر بريدي موب لتفعيل حسابك.",
-  owner_name: "اسم المالك",
-  amount_to_pay: "المبلغ المطلوب",
-  not_available: "غير متوفر",
-  not_specified: "غير محدد",
   receipt_uploaded: "تم رفع الإيصال",
   replace_receipt: "استبدال الإيصال",
-  view_receipt: "عرض الإيصال",
   upload_payment_receipt: "رفع إيصال الدفع",
-  payment_verification_note: "بعد رفع الإيصال، سيقوم فريقنا بالتحقق من دفعتك خلال 24-48 ساعة.",
   receipt_uploaded_successfully: "تم رفع الإيصال بنجاح",
   failed_to_upload_receipt: "فشل في رفع الإيصال",
   failed_to_load_etablissement: "فشل في تحميل بيانات المؤسسة",
@@ -1059,51 +844,28 @@ const lang = {
   failed_to_update_state: "فشل في تحديث حالة الدفع",
   confirm_state_change: "تأكيد تغيير الحالة؟",
   state_change_description: "سيؤدي هذا إلى تحديث حالة دفع الولي.",
-  no_receipt: "لا يوجد إيصال",
   image_file: "صورة",
-  pdf_file: "ملف PDF",
   download: "تحميل",
   invalid_file_type: "يرجى رفع ملف PDF أو JPG أو PNG",
   file_too_large: "حجم الملف يجب أن يكون أقل من 5 ميجابايت",
   please_select_file: "يرجى اختيار ملف",
 
   // Parent Signup
-  nin_incorrect: "رقم التعريف الوطني غير صحيح",
   // Parent Signup Form Translations
   parent_registration: "تسجيل الأعضاء",
-  join_childcare_community: "انضم إلى مجتمع جمعيتنا",
-  personal_information_identity: "المعلومات الشخصية والهوية",
-  contact_information: "معلومات الاتصال",
-  address_information: "معلومات العنوان",
-  account_setup: "إعداد الحساب",
-  national_identity_information: "معلومات الهوية الوطنية",
-  certificate_number: "رقم الشهادة",
-  certificate_help: "مطلوب لتفعيل حقل رقم التعريف الوطني. يجب أن يطابق الأرقام 13-18 من رقم التعريف الوطني",
-  nin_help: "املأ الجنس وتاريخ الميلاد ورقم الشهادة أولاً",
-  registration_successful: "تم التسجيل بنجاح! مرحباً بك في جمعيتنا.",
   registration_failed: "فشل التسجيل. يرجى المحاولة مرة أخرى.",
-  fill_required_fields: "يرجى ملء جميع الحقول المطلوبة في هذه الخطوة",
   correct_nin_errors: "يرجى تصحيح أخطاء رقم التعريف الوطني قبل المتابعة",
 
   // Personal Information Fields
-  last_name_arabic: "الاسم العائلي (عربي)",
-  last_name_french: "الاسم العائلي (فرنسي)",
-  first_name_arabic: "الاسم الشخصي (عربي)",
-  first_name_french: "الاسم الشخصي (فرنسي)",
   date_of_birth: "تاريخ الميلاد",
   gender: "الجنس",
-  certificate_number: "رقم الشهادة",
   national_id_number: "رقم الهوية الوطنية",
-  national_identity_information: "معلومات الهوية الوطنية",
 
   // Contact Information Fields
   phone_number: "رقم الهاتف",
   email_address: "عنوان البريد الإلكتروني",
-  identity_document: "وثيقة الهوية",
-  upload_identity_document: "رفع وثيقة الهوية",
 
   // Address Information Fields
-  address: "العنوان",
   full_address: "العنوان الكامل",
   birth_wilaya: "ولاية الميلاد",
   birth_commune: "بلدية الميلاد",
@@ -1111,7 +873,6 @@ const lang = {
   residence_commune: "بلدية الإقامة",
 
   // Account Setup Fields
-  confirm_password: "تأكيد كلمة المرور",
 
   // Form Validation Messages
   please_enter_last_name_arabic: "الرجاء إدخال الاسم العائلي بالعربية",
@@ -1159,30 +920,20 @@ const lang = {
   select_residence_commune: "اختر بلدية الإقامة",
   failed_to_load_wilayas: "فشل في تحميل الولايات",
   failed_to_load_communes: "فشل في تحميل البلديات",
-  registration_successful: "تم التسجيل بنجاح! مرحباً بك في مركز رعاية الأطفال الخاص بنا.",
 
   // Payments Translations
   payments: "المدفوعات",
   payment: "دفعة",
-  payment_id: "رقم الدفعة",
   joiner_name: "اسم المنخرط",
-  child_name: "اسم الطفل",
   amount: "المبلغ",
-  payment_date: "تاريخ الدفع",
-  payment_status: "حالة الدفع",
   status: "الحالة",
   receipt: "الإيصال",
-  pending: "في الانتظار",
   completed: "مكتمل",
   unknown: "غير معروف",
-  search_payments: "البحث في المدفوعات",
-  download_receipt: "تحميل الإيصال",
-  view_receipt: "عرض الإيصال",
   no_receipt: "لا يوجد إيصال",
 
   // Joiner Signup Form Translations
   joiner_registration: "تسجيل منخرط",
-  join_childcare_community: "انضم إلى مجتمع دار الحضانة",
   personal_information_identity: "المعلومات الشخصية والهوية",
   contact_information: "معلومات الاتصال",
   address_information: "معلومات العنوان",
@@ -1191,7 +942,6 @@ const lang = {
   certificate_number: "رقم الشهادة",
   certificate_help: "مطلوب لتفعيل حقل رقم التعريف الوطني. يجب أن يطابق الأرقام 13-18 من رقم التعريف الوطني",
   nin_help: "املأ الجنس وتاريخ الميلاد ورقم الشهادة أولاً",
-  registration_successful: "تم التسجيل بنجاح! مرحباً بك في مركز رعاية الأطفال.",
 
   // Parent Payment UI
   payment_info: 'معلومات الدفع',
@@ -1209,7 +959,6 @@ const lang = {
   please_select_pdf: 'يرجى اختيار ملف PDF',
   pdf_uploaded_successfully: 'تم رفع PDF بنجاح',
   error_uploading_pdf: 'خطأ في رفع PDF',
-  total_payments: 'إجمالي المدفوعات',
   pending_payments: 'مدفوعات معلقة',
   completed_payments: 'مدفوعات مكتملة',
   search_payments: 'بحث في المدفوعات...',
@@ -1225,7 +974,6 @@ const lang = {
   payment_instruction: "تم الموافقة على حسابك! يرجى إتمام الدفع عبر بريدي موب لتفعيل حسابك.",
   manage_my_payments: "إدارة مدفوعاتي",
   owner_name: "اسم المالك",
-  rip: "الرقم التعريفي البنكي",
   amount_to_pay: "المبلغ المطلوب دفعه",
   not_available: "غير متوفر",
   not_specified: "غير محدد",
@@ -1299,12 +1047,10 @@ const lang = {
   last_7_days: "آخر 7 أيام",
   last_14_days: "آخر 14 يوم",
   last_30_days: "آخر 30 يوم",
-  records: "سجل",
 
   // RFID Scanner translations
   scan_rfid: "مسح RFID",
   update_rfid: "تحديث RFID",
-  scan_rfid_card: "امسح البطاقة",
   scan_rfid_placeholder: "امسح البطاقة أو أدخل الرقم",
   current_rfid: "RFID الحالي",
   rfid_required: "RFID مطلوب",
@@ -1318,13 +1064,9 @@ const lang = {
   check_in: "تسجيل دخول",
   check_out: "تسجيل خروج",
   scan_mode: "وضع المسح",
-  today_check_ins: "تسجيلات الدخول اليوم",
-  today_check_outs: "تسجيلات الخروج اليوم",
   currently_in: "موجود حالياً",
   todays_activity: "نشاط اليوم",
-  select_child: "اختر طفل",
   choose_child: "اختر طفلاً",
-  please_select_child: "يرجى اختيار طفل",
   check_in_successful: "تم تسجيل الدخول بنجاح",
   check_out_successful: "تم تسجيل الخروج بنجاح",
   time: "الوقت",
@@ -1367,9 +1109,7 @@ const lang = {
 
   // Additional RFID Check-In/Out translations
   children_list: "قائمة الأطفال",
-  total_children: "إجمالي الأطفال",
   no_record_today: "لا يوجد سجل اليوم",
-  checked_out: "تم تسجيل الخروج",
   scan_rfid_card: "امسح بطاقة RFID",
   scan_or_enter_rfid: "امسح أو أدخل رقم RFID",
   please_enter_rfid: "يرجى إدخال رقم RFID",
@@ -1405,7 +1145,6 @@ const lang = {
   wilaya_designation_ar: "اسم الولاية بالعربية",
   wilaya_designation_fr: "اسم الولاية بالفرنسية",
   adress: "العنوان",
-  phone: "رقم الهاتف",
   rip: "الرقم البريدي",
   check_parents: "فحص الأولياء",
   parent_email: "بريد الوالد الإلكتروني",
@@ -1414,8 +1153,6 @@ const lang = {
   date_nais: "تاريخ الميلاد",
   total: "المجموع",
   toggle_payment_state: "تغيير حالة الدفع",
-  opening_hour: "ساعة الافتتاح",
-  closing_hour: "ساعة الإغلاق",
   parent_count: "عدد الأولياء المسجلين",
   copyright: "© 2025 Pack Design. جميع الحقوق محفوظة.",
   administration: "الإدارة",
@@ -1444,7 +1181,6 @@ const lang = {
   by: "بواسطة",
   checked_by: "تم التسجيل بواسطة",
   confirmed: "مؤكد",
-  pending: "معلق",
   download_report: "تحميل التقرير",
   checks_history_report: "تقرير تاريخ التسجيلات",
   report_generated_on: "تاريخ إنشاء التقرير",
@@ -1467,12 +1203,6 @@ const lang = {
   related: "قريب",
 
   // Establishment Settings
-  etablissement_settings: "إعدادات المؤسسة",
-  manage_etablissement_information: "إدارة معلومات المؤسسة",
-  basic_information: "المعلومات الأساسية",
-  contact_location: "الاتصال والموقع",
-  operating_hours: "ساعات العمل",
-  owner_information: "معلومات المالك",
   please_enter_designation_ar: "يرجى إدخال الاسم بالعربية",
   enter_designation_ar: "أدخل الاسم بالعربية",
   please_enter_designation_fr: "يرجى إدخال الاسم بالفرنسية",
@@ -1482,15 +1212,6 @@ const lang = {
   enter_phone: "أدخل رقم الهاتف",
   enter_email: "أدخل البريد الإلكتروني",
   invalid_email: "بريد إلكتروني غير صحيح",
-  wilaya_not_set: "لم يتم تحديد الولاية",
-  commune_not_set: "لم يتم تحديد البلدية",
-  select_opening_hour: "اختر ساعة الافتتاح",
-  select_closing_hour: "اختر ساعة الإغلاق",
-  enter_owner_name_ar: "أدخل اسم المالك بالعربية",
-  enter_owner_name_fr: "أدخل اسم المالك بالفرنسية",
-  enter_owner_last_name_ar: "أدخل لقب المالك بالعربية",
-  enter_owner_last_name_fr: "أدخل لقب المالك بالفرنسية",
-  etablissement_updated_successfully: "تم تحديث المؤسسة بنجاح",
 
   // Role translations
   admin: "مدير",
