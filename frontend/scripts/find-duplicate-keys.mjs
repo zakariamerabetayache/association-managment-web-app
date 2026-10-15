@@ -25,6 +25,10 @@
 //   [ok] Phase 6 - Post-write instructions
 // ============================================================
 
+
+// install the pars to tel js works 
+// npm install -D @babel/parser
+
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
@@ -287,12 +291,12 @@ function crossFileComparison(fileSets) {
         hasMissing = true;
         console.log(
           "\n  Keys in " +
-            source.name +
-            " but MISSING in " +
-            target.name +
-            " (" +
-            missing.length +
-            "):"
+          source.name +
+          " but MISSING in " +
+          target.name +
+          " (" +
+          missing.length +
+          "):"
         );
         for (const key of missing) {
           console.log("    - " + key);
@@ -486,10 +490,10 @@ function main() {
 
   console.log(
     "\n  TOTAL: " +
-      totalDuplicates +
-      " duplicate key(s) across " +
-      LOCALE_FILES.length +
-      " files."
+    totalDuplicates +
+    " duplicate key(s) across " +
+    LOCALE_FILES.length +
+    " files."
   );
 
   // Phase 4
@@ -523,10 +527,10 @@ function main() {
 
         console.log(
           "  " +
-            file.name +
-            ": removed " +
-            removedCount +
-            " duplicate entries. File updated."
+          file.name +
+          ": removed " +
+          removedCount +
+          " duplicate entries. File updated."
         );
       }
 
