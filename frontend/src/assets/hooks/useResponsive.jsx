@@ -33,6 +33,7 @@ function calculate() {
     info = newInfo;
   }
 }
+export function configResponsive(config) {
   responsiveConfig = config;
   if (info) calculate();
 }
